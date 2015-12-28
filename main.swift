@@ -7,10 +7,9 @@ print(Utilities().fontIsInstalled("FiraMono-Regular"))
 
 let reg = Registry(url: NSURL(string: "https://github.com/mozilla/Fira/blob/master/")!)
 
-if let data = NSData(contentsOfURL: NSURL(string: "http://s000.tinyupload.com/download.php?file_id=04927064231429684987&t=0492706423142968498762360")!) { // may return nil, too
-  let json = try NSJSONSerialization.JSONObjectWithData(data, options: .AllowFragments)
-  print(json)
-    }
+  let json = try NSJSONSerialization.JSONObjectWithData("{\"name\" : \"FiraMono-Regular\", \"url\" : \"https://github.com/mozilla/Fira/blob/master/ttf/FiraMono-Regular.ttf?raw=true\"}".dataUsingEncoding(NSUTF8StringEncoding)!, options: .AllowFragments)
+  print(json["url"])
+
 Group {
   $0.command("install",
   Flag("font", description: "Install a single font (Default)"),
