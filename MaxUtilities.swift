@@ -66,6 +66,18 @@ public class Font {
     }
 }
 
+public class Family {
+
+    public let name: String?
+
+    public var fonts: [String]?
+
+    public init(name: String?, fonts: NSURL?, sha256: String?) {
+        self.name = name
+        self.fonts = fonts
+    }
+}
+
 
 
 // String extensions for colors in the terminal output
