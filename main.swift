@@ -5,18 +5,18 @@ import Open
 //Utilities().FontsDirectory().open()
 //print(Utilities().fontIsInstalled("FiraMono-Regular"))
 
-let reg = Registry(url: NSURL(string: NSHomeDirectory() + "/Registry")!)
+ Registry().allFonts()
 
-print(reg.url.open())
-
+//print(reg.url.open())
+/*
 let filemanager:NSFileManager = NSFileManager()
 let fonts = filemanager.enumeratorAtPath(reg.url.path!)
 var fontsArray = Array<AnyObject>()
 while let font = fonts?.nextObject() {
   if font.hasSuffix("ttf") {
-    print(font)
+  //  print(font)
   }
-}
+}*/
 Group {
   $0.command("install",
   Flag("font", description: "Install a single font (Default)"),

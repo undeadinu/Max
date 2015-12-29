@@ -1,12 +1,15 @@
 import Foundation
-
+import SwiftyJSON
 public class Registry {
 
-  public var url = NSURL()
+  public let url = NSURL(string: "https://api.github.com/repos/colton/max/contents/.Registry")
 
-  init() {}
+  func allFonts() {
+  let data = NSData(contentsOfURL: url!)
 
-  init(url: NSURL) {
-    self.url = url
+  let json = JSON(data: data!)
+if let test = json[0]["name"].string {
+  print(test)
+}
   }
 }

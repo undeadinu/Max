@@ -51,6 +51,23 @@ public class LocalFont {
     }
 }
 
+public final class Font {
+
+    public let name: String?
+
+    public var download: String?
+
+    public let sha: String?
+
+    /// Construct a package.
+    public init(name: String?, download: String?, sha: String?) {
+        self.name = name
+        self.download = download
+        self.sha = sha
+    }
+}
+
+
 // String extensions for colors in the terminal output
 public extension String {
 
@@ -168,19 +185,4 @@ public extension String {
   func bgDefaultColor() -> String {
       return "\u{001B}[49m"+self+"\u{001B}[0m"
   }
-}
-
-
-public final class Font {
-
-    /// The name of the font, if specified.
-    public let name: String?
-
-    public var download: String?
-
-    /// Construct a package.
-    public init(name: String?, download: String?) {
-        self.name = name
-        self.download = download
-    }
 }

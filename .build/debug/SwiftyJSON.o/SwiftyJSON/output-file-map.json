@@ -1,0 +1,11 @@
+{
+  "": {
+    "swift-dependencies": "/Users/CA/Max/.build/debug/SwiftyJSON.o/SwiftyJSON/master.swiftdeps"
+  },
+  "/Users/CA/Max/Packages/SwiftyJSON-2.3.3/Source/SwiftyJSON.swift": {
+    "dependencies": "/Users/CA/Max/.build/debug/SwiftyJSON.o/SwiftyJSON/SwiftyJSON.d",
+    "object": "/Users/CA/Max/.build/debug/SwiftyJSON.o/Source/SwiftyJSON.swift.o",
+    "swiftmodule": "/Users/CA/Max/.build/debug/SwiftyJSON.o/SwiftyJSON/SwiftyJSON~partial.swiftmodule",
+    "swift-dependencies": "/Users/CA/Max/.build/debug/SwiftyJSON.o/SwiftyJSON/SwiftyJSON.swiftdeps"
+  }
+}

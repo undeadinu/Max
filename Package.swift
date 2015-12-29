@@ -6,6 +6,8 @@ let package = Package(
        .Package(url: "https://github.com/Colton/Open.git",
                 majorVersion: 1),
        .Package(url: "https://github.com/kylef/Commander.git",
-                majorVersion: 0)
+                majorVersion: 0),
+       .Package(url: "https://github.com/SwiftyJSON/SwiftyJSON.git",
+                         majorVersion: 2)
    ]
 )

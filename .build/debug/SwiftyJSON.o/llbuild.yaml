@@ -1,0 +1,29 @@
+client:
+  name: swift-build
+
+tools: {}
+
+targets:
+  "": [<SwiftyJSON>]
+  SwiftyJSON: [<SwiftyJSON>]
+
+commands:
+  <SwiftyJSON-swiftc>:
+    tool: swift-compiler
+    executable: "/Library/Developer/Toolchains/swift-2.2-SNAPSHOT-2015-12-01-a.xctoolchain/usr/bin/swiftc"
+    inputs: ["/Users/CA/Max/Packages/SwiftyJSON-2.3.3/Source/SwiftyJSON.swift"]
+    outputs: ["<SwiftyJSON-swiftc>","/Users/CA/Max/.build/debug/SwiftyJSON.swiftmodule","/Users/CA/Max/.build/debug/SwiftyJSON.o/Source/SwiftyJSON.swift.o"]
+    module-name: "SwiftyJSON"
+    module-output-path: "/Users/CA/Max/.build/debug/SwiftyJSON.swiftmodule"
+    is-library: true
+    sources: ["/Users/CA/Max/Packages/SwiftyJSON-2.3.3/Source/SwiftyJSON.swift"]
+    objects: ["/Users/CA/Max/.build/debug/SwiftyJSON.o/Source/SwiftyJSON.swift.o"]
+    import-paths: ["/Users/CA/Max/.build/debug"]
+    temps-path: "/Users/CA/Max/.build/debug/SwiftyJSON.o/SwiftyJSON"
+    other-args: ["-j8","-Onone","-g","-target","x86_64-apple-macosx10.10","-enable-testing","-sdk","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk","-I","/usr/local/include"]
+  <SwiftyJSON>:
+    tool: shell
+    inputs: ["<SwiftyJSON-swiftc>","/Users/CA/Max/.build/debug/SwiftyJSON.o/Source/SwiftyJSON.swift.o"]
+    outputs: ["<SwiftyJSON>","/Users/CA/Max/.build/debug/SwiftyJSON.a"]
+    args: ["/bin/sh","-c","rm -f '/Users/CA/Max/.build/debug/SwiftyJSON.a'; ar cr '/Users/CA/Max/.build/debug/SwiftyJSON.a' '/Users/CA/Max/.build/debug/SwiftyJSON.o/Source/SwiftyJSON.swift.o'"]
+    description: "Linking Library:  .build/debug/SwiftyJSON.a"
