@@ -37,23 +37,23 @@ provides-member:
 - ["SS", "bgDefaultColor"]
 provides-dynamic-lookup:
 depends-top-level:
-- !private "NSDictionary"
+- !private "Array"
 - !private "AnyObject"
-- !private "UnicodeScalarType"
-- !private "NSAppleEventDescriptor"
-- "Bool"
+- !private "print"
+- "Utilities"
+- !private "NSAppleScript"
+- !private "NSFileManager"
+- "LocalFont"
+- "StringLiteralType"
+- !private "NSUserName"
 - "NSURL"
 - "String"
 - !private "+"
-- "LocalFont"
-- !private "NSFileManager"
-- !private "NSAppleScript"
-- !private "NSUserName"
+- !private "NSAppleEventDescriptor"
 - "Font"
-- !private "Array"
-- "StringLiteralType"
-- !private "print"
-- "Utilities"
+- !private "UnicodeScalarType"
+- !private "NSDictionary"
+- "Bool"
 depends-member:
 - ["Ps9AnyObject", "NSURL"]
 - !private ["Ps9AnyObject", "URLByAppendingPathComponent"]
@@ -202,6 +202,7 @@ depends-member:
 - !private ["Ps41ExtendedGraphemeClusterLiteralConvertible", "componentsSeparatedByString"]
 - !private ["Ps41ExtendedGraphemeClusterLiteralConvertible", "init"]
 - !private ["Sf", "deinit"]
+- ["C3Max4Font", "NSURL"]
 - ["C3Max4Font", "String"]
 - ["C3Max4Font", "deinit"]
 - ["C3Max4Font", "download"]
@@ -609,8 +610,8 @@ depends-nominal:
 - "Ps12_Reflectable"
 - !private "Ps18_SignedIntegerType"
 depends-dynamic-lookup:
-- !private "hasSuffix"
 - !private "stringByDeletingPathExtension"
+- !private "hasSuffix"
 depends-external:
 - "/Library/Developer/Toolchains/swift-2.2-SNAPSHOT-2015-12-01-a.xctoolchain/usr/lib/swift/macosx/x86_64/Swift.swiftmodule"
 - "/Library/Developer/Toolchains/swift-2.2-SNAPSHOT-2015-12-01-a.xctoolchain/usr/lib/swift/macosx/x86_64/Foundation.swiftmodule"
@@ -622,4 +623,4 @@ depends-external:
 - "/Users/CA/Max/.build/debug/CryptoSwift.swiftmodule"
 - "/Users/CA/Max/.build/debug/Commander.swiftmodule"
 - "/Users/CA/Max/.build/debug/Open.swiftmodule"
-interface-hash: "efb1c51e843087c51c7c50f75ccae3c6"
+interface-hash: "45920a846c41b069b4288039392a0f33"

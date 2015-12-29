@@ -51,16 +51,15 @@ public class LocalFont {
     }
 }
 
-public final class Font {
+public class Font {
 
     public let name: String?
 
-    public var download: String?
+    public var download: NSURL?
 
     public let sha256: String?
 
-    /// Construct a package.
-    public init(name: String?, download: String?, sha256: String?) {
+    public init(name: String?, download: NSURL?, sha256: String?) {
         self.name = name
         self.download = download
         self.sha256 = sha256

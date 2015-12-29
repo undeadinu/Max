@@ -7,17 +7,16 @@ provides-member:
 - ["C3Max8Registry", ""]
 provides-dynamic-lookup:
 depends-top-level:
-- !private "Font"
-- !private "++"
-- "NSData"
-- !private "print"
-- "Registry"
-- !private "JSON"
-- "NSURL"
-- !private "NSCharacterSet"
 - !private "UnicodeScalarType"
-- "StringLiteralType"
+- "Font"
+- !private "NSCharacterSet"
+- !private "++"
+- "Registry"
+- "NSData"
+- !private "JSON"
 - "String"
+- "StringLiteralType"
+- "NSURL"
 depends-member:
 - !private ["Ps9AnyObject", "Font"]
 - !private ["Ps9AnyObject", "JSON"]
@@ -26,8 +25,6 @@ depends-member:
 - ["Ps9AnyObject", "NSURL"]
 - !private ["Ps9AnyObject", "URLByAppendingPathComponent"]
 - ["Ps9AnyObject", "init"]
-- !private ["Ps9AnyObject", "name"]
-- !private ["Ps9AnyObject", "print"]
 - !private ["Ps9AnyObject", "sha256"]
 - !private ["Ps9AnyObject", "stringByReplacingOccurrencesOfString"]
 - !private ["Ps9AnyObject", "stringByTrimmingCharactersInSet"]
@@ -176,7 +173,6 @@ depends-member:
 - !private ["Ps23FloatLiteralConvertible", "string"]
 - !private ["Ps23FloatLiteralConvertible", "subscript"]
 - !private ["C3Max4Font", "init"]
-- !private ["C3Max4Font", "name"]
 - !private ["Ps16ForwardIndexType", "Distance"]
 - !private ["Ps16ForwardIndexType", "IntegerLiteralType"]
 - !private ["Ps16ForwardIndexType", "_DisabledRangeIndex"]
@@ -318,7 +314,7 @@ depends-member:
 - !private ["Ps16RawRepresentable", "init"]
 - !private ["Ps16RawRepresentable", "string"]
 - !private ["Ps16RawRepresentable", "subscript"]
-- !private ["C3Max8Registry", "Font"]
+- ["C3Max8Registry", "Font"]
 - !private ["C3Max8Registry", "JSON"]
 - !private ["C3Max8Registry", "NSCharacterSet"]
 - ["C3Max8Registry", "NSData"]
@@ -326,9 +322,9 @@ depends-member:
 - ["C3Max8Registry", "String"]
 - ["C3Max8Registry", "allFonts"]
 - ["C3Max8Registry", "deinit"]
+- ["C3Max8Registry", "font"]
 - ["C3Max8Registry", "fontSHA"]
 - ["C3Max8Registry", "init"]
-- !private ["C3Max8Registry", "print"]
 - ["C3Max8Registry", "url"]
 - !private ["Ps12SequenceType", "Element"]
 - !private ["Ps12SequenceType", "Generator"]
@@ -550,4 +546,4 @@ depends-external:
 - "/Users/CA/Max/.build/debug/CryptoSwift.swiftmodule"
 - "/Users/CA/Max/.build/debug/Commander.swiftmodule"
 - "/Users/CA/Max/.build/debug/Open.swiftmodule"
-interface-hash: "8fdf75005128e2a8563e43acac5005bc"
+interface-hash: "b7e25eb79dd95028f01d6ab9dee54aa5"

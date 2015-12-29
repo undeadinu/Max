@@ -5,8 +5,6 @@ import Open
 //Utilities().FontsDirectory().open()
 //print(Utilities().fontIsInstalled("FiraMono-Regular"))
 
- Registry().allFonts()
-
 //print(reg.url.open())
 /*
 let filemanager:NSFileManager = NSFileManager()

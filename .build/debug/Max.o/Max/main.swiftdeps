@@ -4,19 +4,21 @@ provides-nominal:
 provides-member:
 provides-dynamic-lookup:
 depends-top-level:
+- "Argument"
+- "Registry"
 - "print"
 - "Flag"
 - "Group"
 - "StringLiteralType"
-- "Registry"
-- "Argument"
 - "String"
 depends-member:
 - ["Ps9AnyObject", "ValueType"]
-- ["Ps9AnyObject", "allFonts"]
 - ["Ps9AnyObject", "command"]
+- ["Ps9AnyObject", "download"]
+- ["Ps9AnyObject", "font"]
 - ["Ps9AnyObject", "green"]
 - ["Ps9AnyObject", "init"]
+- ["Ps9AnyObject", "open"]
 - ["Ps9AnyObject", "run"]
 - ["C9Commander8Argument", "ValueType"]
 - ["C9Commander8Argument", "init"]
@@ -30,6 +32,7 @@ depends-member:
 - ["Ps11BooleanType", "_getBuiltinLogicValue"]
 - ["Ps11CVarArgType", "green"]
 - ["Ps11CVarArgType", "init"]
+- ["Ps11CVarArgType", "open"]
 - ["Vs9Character", "deinit"]
 - ["P9Commander11CommandType", "command"]
 - ["P9Commander11CommandType", "init"]
@@ -38,24 +41,29 @@ depends-member:
 - ["Ps10Comparable", "init"]
 - ["Ps28CustomDebugStringConvertible", "green"]
 - ["Ps28CustomDebugStringConvertible", "init"]
+- ["Ps28CustomDebugStringConvertible", "open"]
 - ["Ps23CustomStringConvertible", "_getBuiltinLogicValue"]
 - ["Ps23CustomStringConvertible", "green"]
 - ["Ps23CustomStringConvertible", "init"]
+- ["Ps23CustomStringConvertible", "open"]
 - ["Sd", "deinit"]
 - ["Ps9Equatable", "_getBuiltinLogicValue"]
 - ["Ps9Equatable", "green"]
 - ["Ps9Equatable", "init"]
+- ["Ps9Equatable", "open"]
 - ["Ps41ExtendedGraphemeClusterLiteralConvertible", "green"]
 - ["Ps41ExtendedGraphemeClusterLiteralConvertible", "init"]
 - ["C9Commander4Flag", "ValueType"]
 - ["C9Commander4Flag", "init"]
 - ["Sf", "deinit"]
+- ["C3Max4Font", "download"]
 - ["C9Commander5Group", "command"]
 - ["C9Commander5Group", "init"]
 - ["C9Commander5Group", "run"]
 - ["Ps8Hashable", "_getBuiltinLogicValue"]
 - ["Ps8Hashable", "green"]
 - ["Ps8Hashable", "init"]
+- ["Ps8Hashable", "open"]
 - ["Si", "deinit"]
 - ["Vs5Int16", "deinit"]
 - ["Vs5Int32", "deinit"]
@@ -67,23 +75,30 @@ depends-member:
 - ["Ps14MirrorPathType", "init"]
 - ["PSo8NSCoding", "green"]
 - ["PSo8NSCoding", "init"]
+- ["PSo8NSCoding", "open"]
 - ["PSo9NSCopying", "green"]
 - ["PSo9NSCopying", "init"]
+- ["PSo9NSCopying", "open"]
 - ["PSo16NSMutableCopying", "green"]
 - ["PSo16NSMutableCopying", "init"]
 - ["CSo8NSObject", "green"]
 - ["CSo8NSObject", "init"]
+- ["CSo8NSObject", "open"]
 - ["PSo16NSObjectProtocol", "green"]
 - ["PSo16NSObjectProtocol", "init"]
+- ["PSo16NSObjectProtocol", "open"]
 - ["PSo14NSSecureCoding", "green"]
 - ["PSo14NSSecureCoding", "init"]
+- ["PSo14NSSecureCoding", "open"]
 - ["CSo8NSString", "deinit"]
 - ["CSo8NSString", "green"]
 - ["CSo8NSString", "init"]
+- ["CSo5NSURL", "open"]
+- ["PSo17NSURLHandleClient", "open"]
 - ["Sq", "deinit"]
 - ["Ps16OutputStreamType", "green"]
 - ["Ps16OutputStreamType", "init"]
-- ["C3Max8Registry", "allFonts"]
+- ["C3Max8Registry", "font"]
 - ["C3Max8Registry", "init"]
 - ["Ps10Streamable", "green"]
 - ["Ps10Streamable", "init"]
@@ -110,12 +125,14 @@ depends-member:
 - ["Ps37_BuiltinUTF16StringLiteralConvertible", "init"]
 - ["Ps39_BuiltinUnicodeScalarLiteralConvertible", "green"]
 - ["Ps39_BuiltinUnicodeScalarLiteralConvertible", "init"]
+- ["Ps32_FileReferenceLiteralConvertible", "open"]
 - ["Ps21_ObjectiveCBridgeable", "_getBuiltinLogicValue"]
 - ["Ps21_ObjectiveCBridgeable", "green"]
 - ["Ps21_ObjectiveCBridgeable", "init"]
 - ["Ps12_Reflectable", "_getBuiltinLogicValue"]
 - ["Ps12_Reflectable", "green"]
 - ["Ps12_Reflectable", "init"]
+- ["Ps12_Reflectable", "open"]
 depends-nominal:
 - "Ps9AnyObject"
 - "C9Commander8Argument"
@@ -135,6 +152,7 @@ depends-nominal:
 - "Ps41ExtendedGraphemeClusterLiteralConvertible"
 - "C9Commander4Flag"
 - "Sf"
+- "C3Max4Font"
 - "C9Commander5Group"
 - "Ps8Hashable"
 - "Si"
@@ -151,6 +169,8 @@ depends-nominal:
 - "PSo16NSObjectProtocol"
 - "PSo14NSSecureCoding"
 - "CSo8NSString"
+- "CSo5NSURL"
+- "PSo17NSURLHandleClient"
 - "Sq"
 - "Ps16OutputStreamType"
 - "C3Max8Registry"
@@ -170,6 +190,7 @@ depends-nominal:
 - "Ps32_BuiltinStringLiteralConvertible"
 - "Ps37_BuiltinUTF16StringLiteralConvertible"
 - "Ps39_BuiltinUnicodeScalarLiteralConvertible"
+- "Ps32_FileReferenceLiteralConvertible"
 - "Ps21_ObjectiveCBridgeable"
 - "Ps12_Reflectable"
 depends-dynamic-lookup:
@@ -184,4 +205,4 @@ depends-external:
 - "/Users/CA/Max/.build/debug/CryptoSwift.swiftmodule"
 - "/Users/CA/Max/.build/debug/Commander.swiftmodule"
 - "/Users/CA/Max/.build/debug/Open.swiftmodule"
-interface-hash: "5474fcd3b256b8520821acc49b39f9d7"
+interface-hash: "6d449b7841396a8832025e9b55633a18"
