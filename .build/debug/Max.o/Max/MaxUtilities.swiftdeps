@@ -37,23 +37,23 @@ provides-member:
 - ["SS", "bgDefaultColor"]
 provides-dynamic-lookup:
 depends-top-level:
-- "String"
-- !private "AnyObject"
-- "Utilities"
-- !private "+"
-- !private "NSAppleEventDescriptor"
-- !private "UnicodeScalarType"
-- !private "NSFileManager"
-- "Font"
 - !private "NSDictionary"
+- !private "AnyObject"
+- !private "UnicodeScalarType"
+- !private "NSAppleEventDescriptor"
 - "Bool"
-- !private "Array"
 - "NSURL"
-- !private "print"
-- !private "NSAppleScript"
+- "String"
+- !private "+"
 - "LocalFont"
-- "StringLiteralType"
+- !private "NSFileManager"
+- !private "NSAppleScript"
 - !private "NSUserName"
+- "Font"
+- !private "Array"
+- "StringLiteralType"
+- !private "print"
+- "Utilities"
 depends-member:
 - ["Ps9AnyObject", "NSURL"]
 - !private ["Ps9AnyObject", "URLByAppendingPathComponent"]
@@ -74,7 +74,7 @@ depends-member:
 - !private ["Ps9AnyObject", "name"]
 - !private ["Ps9AnyObject", "nextObject"]
 - !private ["Ps9AnyObject", "path"]
-- !private ["Ps9AnyObject", "sha"]
+- !private ["Ps9AnyObject", "sha256"]
 - !private ["Ps9AnyObject", "stringByDeletingPathExtension"]
 - !private ["Ps9AnyObject", "stringValue"]
 - ["Ps9AnyObject", ""]
@@ -207,7 +207,7 @@ depends-member:
 - ["C3Max4Font", "download"]
 - ["C3Max4Font", "init"]
 - ["C3Max4Font", "name"]
-- ["C3Max4Font", "sha"]
+- ["C3Max4Font", "sha256"]
 - !private ["Ps16ForwardIndexType", "Distance"]
 - !private ["Ps16ForwardIndexType", "IntegerLiteralType"]
 - !private ["Ps13GeneratorType", "Element"]
@@ -622,4 +622,4 @@ depends-external:
 - "/Users/CA/Max/.build/debug/CryptoSwift.swiftmodule"
 - "/Users/CA/Max/.build/debug/Commander.swiftmodule"
 - "/Users/CA/Max/.build/debug/Open.swiftmodule"
-interface-hash: "267be170d8795c623450e720582df51f"
+interface-hash: "efb1c51e843087c51c7c50f75ccae3c6"

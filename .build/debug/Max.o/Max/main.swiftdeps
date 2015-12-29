@@ -5,12 +5,12 @@ provides-member:
 provides-dynamic-lookup:
 depends-top-level:
 - "print"
-- "StringLiteralType"
-- "Group"
-- "String"
-- "Argument"
-- "Registry"
 - "Flag"
+- "Group"
+- "StringLiteralType"
+- "Registry"
+- "Argument"
+- "String"
 depends-member:
 - ["Ps9AnyObject", "ValueType"]
 - ["Ps9AnyObject", "allFonts"]

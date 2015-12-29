@@ -57,13 +57,13 @@ public final class Font {
 
     public var download: String?
 
-    public let sha: String?
+    public let sha256: String?
 
     /// Construct a package.
-    public init(name: String?, download: String?, sha: String?) {
+    public init(name: String?, download: String?, sha256: String?) {
         self.name = name
         self.download = download
-        self.sha = sha
+        self.sha256 = sha256
     }
 }
 

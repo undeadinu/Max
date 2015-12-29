@@ -1,7 +1,7 @@
 version: "Apple Swift version 2.2-dev (LLVM 46be9ff861, Clang 4deb154edc, Swift 778f82939c)"
 options: "8bda69be14e0093227a539e4acaa20f7"
-build_time: [504693925, 623681000]
+build_time: [504695388, 787388000]
 inputs:
   "/Users/CA/Max/main.swift": [504689472, 0]
-  "/Users/CA/Max/MaxUtilities.swift": [504692795, 0]
-  "/Users/CA/Max/Registry.swift": !private [504693921, 0]
+  "/Users/CA/Max/MaxUtilities.swift": [504695259, 0]
+  "/Users/CA/Max/Registry.swift": [504695385, 0]
