@@ -1,0 +1,93 @@
+### Swift dependencies file v0 ###
+provides-top-level:
+provides-nominal:
+provides-member:
+- ["Os3Bit", ""]
+- ["Os3Bit", "inverted"]
+provides-dynamic-lookup:
+depends-top-level:
+- "Bit"
+- !private "=="
+depends-member:
+- !private ["Ps22BidirectionalIndexType", "Bit"]
+- !private ["Ps22BidirectionalIndexType", "One"]
+- !private ["Ps22BidirectionalIndexType", "Zero"]
+- ["Os3Bit", "Bit"]
+- !private ["Os3Bit", "One"]
+- !private ["Os3Bit", "Zero"]
+- ["Os3Bit", "inverted"]
+- !private ["Sb", "_getBuiltinLogicValue"]
+- !private ["Ps25BooleanLiteralConvertible", "_getBuiltinLogicValue"]
+- !private ["Ps11BooleanType", "_getBuiltinLogicValue"]
+- !private ["Ps10Comparable", "Bit"]
+- !private ["Ps10Comparable", "One"]
+- !private ["Ps10Comparable", "Zero"]
+- !private ["Ps23CustomStringConvertible", "_getBuiltinLogicValue"]
+- !private ["Ps9Equatable", "Bit"]
+- !private ["Ps9Equatable", "One"]
+- !private ["Ps9Equatable", "Zero"]
+- !private ["Ps9Equatable", "_getBuiltinLogicValue"]
+- !private ["Ps16ForwardIndexType", "Bit"]
+- !private ["Ps16ForwardIndexType", "One"]
+- !private ["Ps16ForwardIndexType", "Zero"]
+- !private ["Ps8Hashable", "Bit"]
+- !private ["Ps8Hashable", "One"]
+- !private ["Ps8Hashable", "Zero"]
+- !private ["Ps8Hashable", "_getBuiltinLogicValue"]
+- !private ["Ps21IntegerArithmeticType", "Bit"]
+- !private ["Ps21IntegerArithmeticType", "One"]
+- !private ["Ps21IntegerArithmeticType", "Zero"]
+- !private ["Ps21RandomAccessIndexType", "Bit"]
+- !private ["Ps21RandomAccessIndexType", "One"]
+- !private ["Ps21RandomAccessIndexType", "Zero"]
+- !private ["Ps16RawRepresentable", "Bit"]
+- !private ["Ps16RawRepresentable", "One"]
+- !private ["Ps16RawRepresentable", "Zero"]
+- !private ["Ps10Strideable", "Bit"]
+- !private ["Ps10Strideable", "One"]
+- !private ["Ps10Strideable", "Zero"]
+- !private ["Ps33_BuiltinBooleanLiteralConvertible", "_getBuiltinLogicValue"]
+- !private ["Ps14_Incrementable", "Bit"]
+- !private ["Ps14_Incrementable", "One"]
+- !private ["Ps14_Incrementable", "Zero"]
+- !private ["Ps22_IntegerArithmeticType", "Bit"]
+- !private ["Ps22_IntegerArithmeticType", "One"]
+- !private ["Ps22_IntegerArithmeticType", "Zero"]
+- !private ["Ps21_ObjectiveCBridgeable", "_getBuiltinLogicValue"]
+- !private ["Ps22_RandomAccessAmbiguity", "Bit"]
+- !private ["Ps22_RandomAccessAmbiguity", "One"]
+- !private ["Ps22_RandomAccessAmbiguity", "Zero"]
+- !private ["Ps12_Reflectable", "Bit"]
+- !private ["Ps12_Reflectable", "One"]
+- !private ["Ps12_Reflectable", "Zero"]
+- !private ["Ps12_Reflectable", "_getBuiltinLogicValue"]
+depends-nominal:
+- !private "Ps22BidirectionalIndexType"
+- "Os3Bit"
+- !private "Sb"
+- !private "Ps25BooleanLiteralConvertible"
+- !private "Ps11BooleanType"
+- !private "Ps10Comparable"
+- !private "Ps23CustomStringConvertible"
+- !private "Ps9Equatable"
+- !private "Ps16ForwardIndexType"
+- !private "Ps8Hashable"
+- !private "Ps21IntegerArithmeticType"
+- !private "Ps21RandomAccessIndexType"
+- !private "Ps16RawRepresentable"
+- !private "Ps10Strideable"
+- !private "Ps33_BuiltinBooleanLiteralConvertible"
+- !private "Ps14_Incrementable"
+- !private "Ps22_IntegerArithmeticType"
+- !private "Ps21_ObjectiveCBridgeable"
+- !private "Ps22_RandomAccessAmbiguity"
+- !private "Ps12_Reflectable"
+depends-dynamic-lookup:
+depends-external:
+- "/Library/Developer/Toolchains/swift-2.2-SNAPSHOT-2015-12-01-a.xctoolchain/usr/lib/swift/macosx/x86_64/Swift.swiftmodule"
+- "/Library/Developer/Toolchains/swift-2.2-SNAPSHOT-2015-12-01-a.xctoolchain/usr/lib/swift/macosx/x86_64/Darwin.swiftmodule"
+- "/Library/Developer/Toolchains/swift-2.2-SNAPSHOT-2015-12-01-a.xctoolchain/usr/lib/swift/macosx/x86_64/Foundation.swiftmodule"
+- "/Library/Developer/Toolchains/swift-2.2-SNAPSHOT-2015-12-01-a.xctoolchain/usr/lib/swift/macosx/x86_64/Dispatch.swiftmodule"
+- "/Library/Developer/Toolchains/swift-2.2-SNAPSHOT-2015-12-01-a.xctoolchain/usr/lib/swift/macosx/x86_64/ObjectiveC.swiftmodule"
+- "/Library/Developer/Toolchains/swift-2.2-SNAPSHOT-2015-12-01-a.xctoolchain/usr/lib/swift/macosx/x86_64/CoreGraphics.swiftmodule"
+interface-hash: "e7aaead4377f04df6dca78c2ff7c48aa"

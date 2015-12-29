@@ -68,6 +68,7 @@ public final class Font {
 }
 
 
+
 // String extensions for colors in the terminal output
 public extension String {
 

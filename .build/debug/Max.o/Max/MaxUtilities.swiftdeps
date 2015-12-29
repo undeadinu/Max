@@ -37,23 +37,23 @@ provides-member:
 - ["SS", "bgDefaultColor"]
 provides-dynamic-lookup:
 depends-top-level:
-- !private "NSUserName"
-- !private "Array"
-- "Utilities"
-- !private "print"
-- "StringLiteralType"
-- !private "NSAppleScript"
-- !private "NSFileManager"
-- "LocalFont"
-- "NSURL"
-- !private "+"
 - "String"
-- !private "UnicodeScalarType"
-- !private "NSAppleEventDescriptor"
 - !private "AnyObject"
+- "Utilities"
+- !private "+"
+- !private "NSAppleEventDescriptor"
+- !private "UnicodeScalarType"
+- !private "NSFileManager"
 - "Font"
-- "Bool"
 - !private "NSDictionary"
+- "Bool"
+- !private "Array"
+- "NSURL"
+- !private "print"
+- !private "NSAppleScript"
+- "LocalFont"
+- "StringLiteralType"
+- !private "NSUserName"
 depends-member:
 - ["Ps9AnyObject", "NSURL"]
 - !private ["Ps9AnyObject", "URLByAppendingPathComponent"]
@@ -102,12 +102,23 @@ depends-member:
 - !private ["Vs10ArraySlice", "Index"]
 - !private ["Ps22BidirectionalIndexType", "Distance"]
 - !private ["Ps22BidirectionalIndexType", "IntegerLiteralType"]
+- !private ["P11CryptoSwift22BitshiftOperationsType", "Distance"]
+- !private ["P11CryptoSwift22BitshiftOperationsType", "IntegerLiteralType"]
 - !private ["Ps21BitwiseOperationsType", "Distance"]
 - !private ["Ps21BitwiseOperationsType", "IntegerLiteralType"]
 - !private ["Sb", "_getBuiltinLogicValue"]
 - !private ["Sb", "deinit"]
 - !private ["Ps25BooleanLiteralConvertible", "_getBuiltinLogicValue"]
 - !private ["Ps11BooleanType", "_getBuiltinLogicValue"]
+- !private ["P11CryptoSwift15ByteConvertible", "Distance"]
+- !private ["P11CryptoSwift15ByteConvertible", "IntegerLiteralType"]
+- !private ["P11CryptoSwift11CSArrayType", "Generator"]
+- !private ["P11CryptoSwift11CSArrayType", "Index"]
+- !private ["P11CryptoSwift11CSArrayType", "SubSequence"]
+- !private ["P11CryptoSwift11CSArrayType", "_Element"]
+- !private ["P11CryptoSwift11CSArrayType", "append"]
+- !private ["P11CryptoSwift11CSArrayType", "init"]
+- !private ["P11CryptoSwift11CSArrayType", "subscript"]
 - !private ["Ps11CVarArgType", "Distance"]
 - !private ["Ps11CVarArgType", "IntegerLiteralType"]
 - !private ["Ps11CVarArgType", "URLByAppendingPathComponent"]
@@ -223,6 +234,8 @@ depends-member:
 - !private ["Ps9Indexable", "init"]
 - !private ["Ps9Indexable", "subscript"]
 - !private ["Vs17IndexingGenerator", "Element"]
+- !private ["P11CryptoSwift9Initiable", "Distance"]
+- !private ["P11CryptoSwift9Initiable", "IntegerLiteralType"]
 - !private ["Si", "Distance"]
 - !private ["Si", "IntegerLiteralType"]
 - !private ["Si", "deinit"]
@@ -499,10 +512,13 @@ depends-nominal:
 - !private "Ps23ArrayLiteralConvertible"
 - !private "Vs10ArraySlice"
 - !private "Ps22BidirectionalIndexType"
+- !private "P11CryptoSwift22BitshiftOperationsType"
 - !private "Ps21BitwiseOperationsType"
 - !private "Sb"
 - !private "Ps25BooleanLiteralConvertible"
 - !private "Ps11BooleanType"
+- !private "P11CryptoSwift15ByteConvertible"
+- !private "P11CryptoSwift11CSArrayType"
 - "Ps11CVarArgType"
 - !private "Vs9Character"
 - !private "Ps14CollectionType"
@@ -519,6 +535,7 @@ depends-nominal:
 - "Ps8Hashable"
 - !private "Ps9Indexable"
 - !private "Vs17IndexingGenerator"
+- !private "P11CryptoSwift9Initiable"
 - !private "Si"
 - !private "Vs5Int16"
 - !private "Vs5Int32"
@@ -592,8 +609,8 @@ depends-nominal:
 - "Ps12_Reflectable"
 - !private "Ps18_SignedIntegerType"
 depends-dynamic-lookup:
-- !private "stringByDeletingPathExtension"
 - !private "hasSuffix"
+- !private "stringByDeletingPathExtension"
 depends-external:
 - "/Library/Developer/Toolchains/swift-2.2-SNAPSHOT-2015-12-01-a.xctoolchain/usr/lib/swift/macosx/x86_64/Swift.swiftmodule"
 - "/Library/Developer/Toolchains/swift-2.2-SNAPSHOT-2015-12-01-a.xctoolchain/usr/lib/swift/macosx/x86_64/Foundation.swiftmodule"
@@ -602,6 +619,7 @@ depends-external:
 - "/Library/Developer/Toolchains/swift-2.2-SNAPSHOT-2015-12-01-a.xctoolchain/usr/lib/swift/macosx/x86_64/ObjectiveC.swiftmodule"
 - "/Library/Developer/Toolchains/swift-2.2-SNAPSHOT-2015-12-01-a.xctoolchain/usr/lib/swift/macosx/x86_64/CoreGraphics.swiftmodule"
 - "/Users/CA/Max/.build/debug/SwiftyJSON.swiftmodule"
+- "/Users/CA/Max/.build/debug/CryptoSwift.swiftmodule"
 - "/Users/CA/Max/.build/debug/Commander.swiftmodule"
 - "/Users/CA/Max/.build/debug/Open.swiftmodule"
 interface-hash: "267be170d8795c623450e720582df51f"

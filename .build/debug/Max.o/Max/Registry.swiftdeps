@@ -7,18 +7,21 @@ provides-member:
 - ["C3Max8Registry", ""]
 provides-dynamic-lookup:
 depends-top-level:
-- !private "print"
-- "Registry"
-- "StringLiteralType"
-- !private "JSON"
 - !private "NSData"
+- !private "print"
+- "StringLiteralType"
+- !private "++"
+- !private "JSON"
+- "Registry"
 - "NSURL"
 depends-member:
 - !private ["Ps9AnyObject", "JSON"]
 - !private ["Ps9AnyObject", "NSData"]
 - ["Ps9AnyObject", "NSURL"]
+- !private ["Ps9AnyObject", "URLByAppendingPathComponent"]
 - ["Ps9AnyObject", "init"]
 - !private ["Ps9AnyObject", "print"]
+- !private ["Ps9AnyObject", "sha256"]
 - !private ["Ps9AnyObject", "url"]
 - ["Ps9AnyObject", ""]
 - !private ["P9Commander19ArgumentConvertible", "IntegerLiteralType"]
@@ -31,6 +34,7 @@ depends-member:
 - !private ["Ps23ArrayLiteralConvertible", "string"]
 - !private ["Ps23ArrayLiteralConvertible", "subscript"]
 - !private ["Ps22BidirectionalIndexType", "IntegerLiteralType"]
+- !private ["P11CryptoSwift22BitshiftOperationsType", "IntegerLiteralType"]
 - !private ["Ps21BitwiseOperationsType", "IntegerLiteralType"]
 - !private ["Ps25BooleanLiteralConvertible", "Generator"]
 - !private ["Ps25BooleanLiteralConvertible", "Index"]
@@ -46,8 +50,11 @@ depends-member:
 - !private ["Ps11BooleanType", "init"]
 - !private ["Ps11BooleanType", "string"]
 - !private ["Ps11BooleanType", "subscript"]
+- !private ["P11CryptoSwift15ByteConvertible", "IntegerLiteralType"]
 - !private ["Ps11CVarArgType", "IntegerLiteralType"]
+- !private ["Ps11CVarArgType", "URLByAppendingPathComponent"]
 - ["Ps11CVarArgType", "init"]
+- !private ["Ps11CVarArgType", "sha256"]
 - !private ["Ps14CollectionType", "Generator"]
 - !private ["Ps14CollectionType", "Index"]
 - !private ["Ps14CollectionType", "SubSequence"]
@@ -69,16 +76,20 @@ depends-member:
 - !private ["Ps28CustomDebugStringConvertible", "Index"]
 - ["Ps28CustomDebugStringConvertible", "Some"]
 - !private ["Ps28CustomDebugStringConvertible", "SubSequence"]
+- !private ["Ps28CustomDebugStringConvertible", "URLByAppendingPathComponent"]
 - !private ["Ps28CustomDebugStringConvertible", "_Element"]
 - ["Ps28CustomDebugStringConvertible", "init"]
+- !private ["Ps28CustomDebugStringConvertible", "sha256"]
 - !private ["Ps28CustomDebugStringConvertible", "string"]
 - !private ["Ps28CustomDebugStringConvertible", "subscript"]
 - !private ["Ps23CustomStringConvertible", "Generator"]
 - !private ["Ps23CustomStringConvertible", "Index"]
 - !private ["Ps23CustomStringConvertible", "IntegerLiteralType"]
 - !private ["Ps23CustomStringConvertible", "SubSequence"]
+- !private ["Ps23CustomStringConvertible", "URLByAppendingPathComponent"]
 - !private ["Ps23CustomStringConvertible", "_Element"]
 - ["Ps23CustomStringConvertible", "init"]
+- !private ["Ps23CustomStringConvertible", "sha256"]
 - !private ["Ps23CustomStringConvertible", "string"]
 - !private ["Ps23CustomStringConvertible", "subscript"]
 - !private ["Ps28DictionaryLiteralConvertible", "Generator"]
@@ -93,9 +104,11 @@ depends-member:
 - !private ["Ps9Equatable", "Index"]
 - !private ["Ps9Equatable", "IntegerLiteralType"]
 - !private ["Ps9Equatable", "SubSequence"]
+- !private ["Ps9Equatable", "URLByAppendingPathComponent"]
 - !private ["Ps9Equatable", "_DisabledRangeIndex"]
 - !private ["Ps9Equatable", "_Element"]
 - ["Ps9Equatable", "init"]
+- !private ["Ps9Equatable", "sha256"]
 - !private ["Ps9Equatable", "string"]
 - !private ["Ps9Equatable", "subscript"]
 - !private ["Ps41ExtendedGraphemeClusterLiteralConvertible", "Generator"]
@@ -117,7 +130,9 @@ depends-member:
 - !private ["Ps16ForwardIndexType", "_DisabledRangeIndex"]
 - !private ["Ps13GeneratorType", "Element"]
 - !private ["Ps8Hashable", "IntegerLiteralType"]
+- !private ["Ps8Hashable", "URLByAppendingPathComponent"]
 - ["Ps8Hashable", "init"]
+- !private ["Ps8Hashable", "sha256"]
 - !private ["Ps9Indexable", "Generator"]
 - !private ["Ps9Indexable", "Index"]
 - !private ["Ps9Indexable", "SubSequence"]
@@ -126,6 +141,7 @@ depends-member:
 - !private ["Ps9Indexable", "string"]
 - !private ["Ps9Indexable", "subscript"]
 - !private ["Vs17IndexingGenerator", "Element"]
+- !private ["P11CryptoSwift9Initiable", "IntegerLiteralType"]
 - !private ["Si", "IntegerLiteralType"]
 - !private ["Ps21IntegerArithmeticType", "IntegerLiteralType"]
 - !private ["Ps25IntegerLiteralConvertible", "Generator"]
@@ -145,18 +161,34 @@ depends-member:
 - !private ["V10SwiftyJSON4JSON", "init"]
 - !private ["V10SwiftyJSON4JSON", "string"]
 - !private ["V10SwiftyJSON4JSON", "subscript"]
+- !private ["V10SwiftyJSON13JSONGenerator", "Element"]
 - !private ["V10SwiftyJSON9JSONIndex", "Distance"]
 - !private ["V10SwiftyJSON9JSONIndex", "_DisabledRangeIndex"]
+- !private ["V10SwiftyJSON9JSONIndex", "deinit"]
 - !private ["P10SwiftyJSON17JSONSubscriptType", "IntegerLiteralType"]
 - !private ["Ps14MirrorPathType", "IntegerLiteralType"]
+- !private ["PSo8NSCoding", "URLByAppendingPathComponent"]
 - ["PSo8NSCoding", "init"]
+- !private ["PSo8NSCoding", "sha256"]
+- !private ["PSo9NSCopying", "URLByAppendingPathComponent"]
 - ["PSo9NSCopying", "init"]
+- !private ["PSo9NSCopying", "sha256"]
 - !private ["CSo6NSData", "init"]
+- !private ["CSo6NSData", "sha256"]
 - !private ["PSo16NSMutableCopying", "init"]
+- !private ["PSo16NSMutableCopying", "sha256"]
+- !private ["CSo8NSObject", "URLByAppendingPathComponent"]
 - ["CSo8NSObject", "init"]
+- !private ["CSo8NSObject", "sha256"]
+- !private ["PSo16NSObjectProtocol", "URLByAppendingPathComponent"]
 - ["PSo16NSObjectProtocol", "init"]
+- !private ["PSo16NSObjectProtocol", "sha256"]
+- !private ["PSo14NSSecureCoding", "URLByAppendingPathComponent"]
 - ["PSo14NSSecureCoding", "init"]
+- !private ["PSo14NSSecureCoding", "sha256"]
+- !private ["CSo5NSURL", "URLByAppendingPathComponent"]
 - ["CSo5NSURL", "init"]
+- !private ["PSo17NSURLHandleClient", "URLByAppendingPathComponent"]
 - ["PSo17NSURLHandleClient", "init"]
 - !private ["Ps21NilLiteralConvertible", "Generator"]
 - !private ["Ps21NilLiteralConvertible", "Index"]
@@ -199,7 +231,6 @@ depends-member:
 - !private ["Vs5Slice", "SubSequence"]
 - !private ["Vs5Slice", "_Element"]
 - !private ["Vs5Slice", "string"]
-- !private ["Vs5Slice", "subscript"]
 - !private ["Ps10Strideable", "IntegerLiteralType"]
 - !private ["Ps24StringLiteralConvertible", "Generator"]
 - !private ["Ps24StringLiteralConvertible", "Index"]
@@ -216,6 +247,7 @@ depends-member:
 - !private ["Ps31UnicodeScalarLiteralConvertible", "string"]
 - !private ["Ps31UnicodeScalarLiteralConvertible", "subscript"]
 - !private ["Ps33_BuiltinIntegerLiteralConvertible", "IntegerLiteralType"]
+- !private ["Ps32_FileReferenceLiteralConvertible", "URLByAppendingPathComponent"]
 - ["Ps32_FileReferenceLiteralConvertible", "init"]
 - !private ["Ps14_Incrementable", "Distance"]
 - !private ["Ps14_Incrementable", "IntegerLiteralType"]
@@ -226,6 +258,7 @@ depends-member:
 - !private ["Ps22_RandomAccessAmbiguity", "IntegerLiteralType"]
 - !private ["Ps12_Reflectable", "IntegerLiteralType"]
 - ["Ps12_Reflectable", "Some"]
+- !private ["Ps12_Reflectable", "URLByAppendingPathComponent"]
 - ["Ps12_Reflectable", "init"]
 - !private ["Ps18_SignedIntegerType", "IntegerLiteralType"]
 depends-nominal:
@@ -234,9 +267,11 @@ depends-nominal:
 - !private "Sa"
 - !private "Ps23ArrayLiteralConvertible"
 - !private "Ps22BidirectionalIndexType"
+- !private "P11CryptoSwift22BitshiftOperationsType"
 - !private "Ps21BitwiseOperationsType"
 - !private "Ps25BooleanLiteralConvertible"
 - !private "Ps11BooleanType"
+- !private "P11CryptoSwift15ByteConvertible"
 - "Ps11CVarArgType"
 - !private "Ps14CollectionType"
 - !private "Ps10Comparable"
@@ -251,11 +286,13 @@ depends-nominal:
 - "Ps8Hashable"
 - !private "Ps9Indexable"
 - !private "Vs17IndexingGenerator"
+- !private "P11CryptoSwift9Initiable"
 - !private "Si"
 - !private "Ps21IntegerArithmeticType"
 - !private "Ps25IntegerLiteralConvertible"
 - !private "Ps11IntegerType"
 - !private "V10SwiftyJSON4JSON"
+- !private "V10SwiftyJSON13JSONGenerator"
 - !private "V10SwiftyJSON9JSONIndex"
 - !private "P10SwiftyJSON17JSONSubscriptType"
 - !private "Ps14MirrorPathType"
@@ -299,6 +336,7 @@ depends-external:
 - "/Library/Developer/Toolchains/swift-2.2-SNAPSHOT-2015-12-01-a.xctoolchain/usr/lib/swift/macosx/x86_64/ObjectiveC.swiftmodule"
 - "/Library/Developer/Toolchains/swift-2.2-SNAPSHOT-2015-12-01-a.xctoolchain/usr/lib/swift/macosx/x86_64/CoreGraphics.swiftmodule"
 - "/Users/CA/Max/.build/debug/SwiftyJSON.swiftmodule"
+- "/Users/CA/Max/.build/debug/CryptoSwift.swiftmodule"
 - "/Users/CA/Max/.build/debug/Commander.swiftmodule"
 - "/Users/CA/Max/.build/debug/Open.swiftmodule"
-interface-hash: "e4341d5a9e50c54d344f0dc8f9062fcb"
+interface-hash: "b7195e56396a3dfdd8aa9b70b9c3fffa"

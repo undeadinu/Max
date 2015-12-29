@@ -1,6 +1,6 @@
 version: "Apple Swift version 2.2-dev (LLVM 46be9ff861, Clang 4deb154edc, Swift 778f82939c)"
 options: "e38da09e4e7ef97719541cacc2d1c600"
-build_time: [504689839, 756337000]
+build_time: [504692850, 193226000]
 inputs:
   "/Users/CA/Max/Packages/Commander-0.4.0/Sources/ArgumentConvertible.swift": [504158991, 0]
   "/Users/CA/Max/Packages/Commander-0.4.0/Sources/ArgumentDescription.swift": [504158991, 0]

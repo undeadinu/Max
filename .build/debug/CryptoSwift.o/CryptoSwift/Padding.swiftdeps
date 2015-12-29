@@ -1,0 +1,28 @@
+### Swift dependencies file v0 ###
+provides-top-level:
+- "Padding"
+provides-nominal:
+- "P11CryptoSwift7Padding"
+provides-member:
+- ["P11CryptoSwift7Padding", ""]
+provides-dynamic-lookup:
+depends-top-level:
+- "Padding"
+- "Int"
+- "UInt8"
+depends-member:
+- ["P11CryptoSwift7Padding", "Int"]
+- ["P11CryptoSwift7Padding", "UInt8"]
+- ["P11CryptoSwift7Padding", "add"]
+- ["P11CryptoSwift7Padding", "remove"]
+depends-nominal:
+- "P11CryptoSwift7Padding"
+depends-dynamic-lookup:
+depends-external:
+- "/Library/Developer/Toolchains/swift-2.2-SNAPSHOT-2015-12-01-a.xctoolchain/usr/lib/swift/macosx/x86_64/Swift.swiftmodule"
+- "/Library/Developer/Toolchains/swift-2.2-SNAPSHOT-2015-12-01-a.xctoolchain/usr/lib/swift/macosx/x86_64/Darwin.swiftmodule"
+- "/Library/Developer/Toolchains/swift-2.2-SNAPSHOT-2015-12-01-a.xctoolchain/usr/lib/swift/macosx/x86_64/Foundation.swiftmodule"
+- "/Library/Developer/Toolchains/swift-2.2-SNAPSHOT-2015-12-01-a.xctoolchain/usr/lib/swift/macosx/x86_64/Dispatch.swiftmodule"
+- "/Library/Developer/Toolchains/swift-2.2-SNAPSHOT-2015-12-01-a.xctoolchain/usr/lib/swift/macosx/x86_64/ObjectiveC.swiftmodule"
+- "/Library/Developer/Toolchains/swift-2.2-SNAPSHOT-2015-12-01-a.xctoolchain/usr/lib/swift/macosx/x86_64/CoreGraphics.swiftmodule"
+interface-hash: "11f16c2c265b9d3cd9484684a0f80634"

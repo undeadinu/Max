@@ -4,13 +4,13 @@ provides-nominal:
 provides-member:
 provides-dynamic-lookup:
 depends-top-level:
+- "print"
+- "StringLiteralType"
 - "Group"
 - "String"
+- "Argument"
 - "Registry"
 - "Flag"
-- "print"
-- "Argument"
-- "StringLiteralType"
 depends-member:
 - ["Ps9AnyObject", "ValueType"]
 - ["Ps9AnyObject", "allFonts"]
@@ -181,6 +181,7 @@ depends-external:
 - "/Library/Developer/Toolchains/swift-2.2-SNAPSHOT-2015-12-01-a.xctoolchain/usr/lib/swift/macosx/x86_64/ObjectiveC.swiftmodule"
 - "/Library/Developer/Toolchains/swift-2.2-SNAPSHOT-2015-12-01-a.xctoolchain/usr/lib/swift/macosx/x86_64/CoreGraphics.swiftmodule"
 - "/Users/CA/Max/.build/debug/SwiftyJSON.swiftmodule"
+- "/Users/CA/Max/.build/debug/CryptoSwift.swiftmodule"
 - "/Users/CA/Max/.build/debug/Commander.swiftmodule"
 - "/Users/CA/Max/.build/debug/Open.swiftmodule"
 interface-hash: "5474fcd3b256b8520821acc49b39f9d7"

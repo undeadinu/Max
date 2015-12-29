@@ -10,7 +10,6 @@ release:
 	@swift build --configuration release
 
 install-dev:
-	swift build --clean
 	swift build
 	cp $(DEBUGDIR) /usr/local/bin/Max
 

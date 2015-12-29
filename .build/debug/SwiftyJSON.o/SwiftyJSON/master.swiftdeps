@@ -1,5 +1,5 @@
 version: "Apple Swift version 2.2-dev (LLVM 46be9ff861, Clang 4deb154edc, Swift 778f82939c)"
 options: "df622ffba9f548f044f72e30b80bd466"
-build_time: [504689840, 907409000]
+build_time: [504692851, 305250000]
 inputs:
   "/Users/CA/Max/Packages/SwiftyJSON-2.3.3/Source/SwiftyJSON.swift": [504689754, 0]
