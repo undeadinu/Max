@@ -1,0 +1,12 @@
+version: "Apple Swift version 2.2-dev (LLVM 46be9ff861, Clang 4deb154edc, Swift 778f82939c)"
+options: "7b18365cecfcb2280b4d023c2fdb05ac"
+build_time: [504688388, 59200000]
+inputs:
+  "/Users/CA/Max/Packages/Commander-0.4.0/Sources/ArgumentConvertible.swift": [504158991, 0]
+  "/Users/CA/Max/Packages/Commander-0.4.0/Sources/ArgumentDescription.swift": [504158991, 0]
+  "/Users/CA/Max/Packages/Commander-0.4.0/Sources/ArgumentParser.swift": [504158991, 0]
+  "/Users/CA/Max/Packages/Commander-0.4.0/Sources/Command.swift": [504158991, 0]
+  "/Users/CA/Max/Packages/Commander-0.4.0/Sources/CommandRunner.swift": [504158991, 0]
+  "/Users/CA/Max/Packages/Commander-0.4.0/Sources/Commands.swift": [504158991, 0]
+  "/Users/CA/Max/Packages/Commander-0.4.0/Sources/CommandType.swift": [504158991, 0]
+  "/Users/CA/Max/Packages/Commander-0.4.0/Sources/Group.swift": [504158991, 0]

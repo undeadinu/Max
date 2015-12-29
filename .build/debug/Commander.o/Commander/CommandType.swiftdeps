@@ -8,9 +8,9 @@ provides-member:
 - ["P9Commander11CommandType", "run"]
 provides-dynamic-lookup:
 depends-top-level:
-- "CommandType"
-- "ArgumentParser"
 - "String"
+- "ArgumentParser"
+- "CommandType"
 depends-member:
 - !private ["Ps9AnyObject", "init"]
 - !private ["P9Commander19ArgumentConvertible", "init"]

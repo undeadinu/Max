@@ -4,26 +4,7 @@ client:
 tools: {}
 
 targets:
-  "": [<Max>]
-  Max: [<Max>]
+  "": []
 
 commands:
-  <Max-swiftc>:
-    tool: swift-compiler
-    executable: "/Library/Developer/Toolchains/swift-2.2-SNAPSHOT-2015-12-01-a.xctoolchain/usr/bin/swiftc"
-    inputs: ["/Users/CA/Max/main.swift","/Users/CA/Max/MaxUtilities.swift","/Users/CA/Max/Registry.swift"]
-    outputs: ["<Max-swiftc>","/Users/CA/Max/.build/debug/Max.swiftmodule","/Users/CA/Max/.build/debug/Max.o/main.swift.o","/Users/CA/Max/.build/debug/Max.o/MaxUtilities.swift.o","/Users/CA/Max/.build/debug/Max.o/Registry.swift.o"]
-    module-name: "Max"
-    module-output-path: "/Users/CA/Max/.build/debug/Max.swiftmodule"
-    is-library: false
-    sources: ["/Users/CA/Max/main.swift","/Users/CA/Max/MaxUtilities.swift","/Users/CA/Max/Registry.swift"]
-    objects: ["/Users/CA/Max/.build/debug/Max.o/main.swift.o","/Users/CA/Max/.build/debug/Max.o/MaxUtilities.swift.o","/Users/CA/Max/.build/debug/Max.o/Registry.swift.o"]
-    import-paths: ["/Users/CA/Max/.build/debug"]
-    temps-path: "/Users/CA/Max/.build/debug/Max.o/Max"
-    other-args: ["-j8","-Onone","-g","-target","x86_64-apple-macosx10.10","-sdk","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk","-I","/usr/local/include"]
-  <Max>:
-    tool: shell
-    inputs: ["<Max-swiftc>","/Users/CA/Max/.build/debug/Max.o/main.swift.o","/Users/CA/Max/.build/debug/Max.o/MaxUtilities.swift.o","/Users/CA/Max/.build/debug/Max.o/Registry.swift.o"]
-    outputs: ["<Max>","/Users/CA/Max/.build/debug/Max"]
-    args: ["/Library/Developer/Toolchains/swift-2.2-SNAPSHOT-2015-12-01-a.xctoolchain/usr/bin/swiftc","-o","/Users/CA/Max/.build/debug/Max","/Users/CA/Max/.build/debug/Max.o/main.swift.o","/Users/CA/Max/.build/debug/Max.o/MaxUtilities.swift.o","/Users/CA/Max/.build/debug/Max.o/Registry.swift.o","-Xlinker","-all_load","-target","x86_64-apple-macosx10.10","-sdk","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk","-Xlinker","/Users/CA/Max/.build/debug/Open.a","-Xlinker","/Users/CA/Max/.build/debug/Commander.a","-L/usr/local/lib"]
-    description: "Linking Executable:  .build/debug/Max"
+  {}

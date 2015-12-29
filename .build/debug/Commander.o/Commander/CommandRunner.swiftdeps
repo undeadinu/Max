@@ -6,24 +6,24 @@ provides-member:
 - ["P9Commander11CommandType", "run"]
 provides-dynamic-lookup:
 depends-top-level:
-- !private "GroupError"
-- !private "ArgumentParser"
-- !private "IntegerLiteralType"
-- "String"
-- !private "exit"
-- !private "Array"
-- !private "fputs"
-- "CommandType"
-- !private "!"
 - !private "print"
-- !private "StringLiteralType"
 - !private "stderr"
+- !private "!"
+- !private "IntegerLiteralType"
+- !private "&&"
+- !private "exit"
+- !private "+="
+- !private "StringLiteralType"
+- !private "fputs"
+- !private "ArgumentParser"
+- "CommandType"
 - !private "Help"
 - !private "UnicodeScalarType"
-- !private "+="
+- !private "Array"
 - !private "Process"
-- !private "&&"
 - !private "FloatLiteralType"
+- !private "GroupError"
+- "String"
 depends-member:
 - !private ["Ps9AnyObject", "hasOption"]
 - !private ["Ps9AnyObject", "init"]

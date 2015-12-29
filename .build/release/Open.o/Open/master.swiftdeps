@@ -1,0 +1,5 @@
+version: "Apple Swift version 2.2-dev (LLVM 46be9ff861, Clang 4deb154edc, Swift 778f82939c)"
+options: "a6fa8e4ff2f1126a2cbf3a69ee8b17f3"
+build_time: [504688387, 322224000]
+inputs:
+  "/Users/CA/Max/Packages/Open-1.0.1/Sources/Open.swift": [504170480, 0]

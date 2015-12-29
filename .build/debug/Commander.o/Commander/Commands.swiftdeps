@@ -62,20 +62,20 @@ provides-member:
 - ["C9Commander5Group", "command"]
 provides-dynamic-lookup:
 depends-top-level:
-- !private "Commander"
+- !private "UsageError"
+- !private "ArgumentConvertible"
 - "command"
-- !private "BoxedArgumentDescriptor"
-- !private "ArgumentDescriptor"
 - !private "Help"
 - "String"
-- "Array"
-- !private "UsageError"
 - "StringLiteralType"
 - "CommandType"
+- "Array"
 - !private "!"
-- !private "ArgumentConvertible"
+- !private "ArgumentDescriptor"
 - !private "AnonymousCommand"
 - "Group"
+- !private "BoxedArgumentDescriptor"
+- !private "Commander"
 depends-member:
 - !private ["V9Commander16AnonymousCommand", "deinit"]
 - !private ["V9Commander16AnonymousCommand", "init"]

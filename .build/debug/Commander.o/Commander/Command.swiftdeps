@@ -11,15 +11,15 @@ provides-member:
 - ["O9Commander12CommandError", ""]
 provides-dynamic-lookup:
 depends-top-level:
-- "CommandError"
 - "command"
-- "=="
-- !private "IntegerLiteralType"
 - "CommandType"
 - !private "FloatLiteralType"
+- "CommandError"
 - "AnonymousCommand"
 - "ErrorType"
+- !private "IntegerLiteralType"
 - "ArgumentParser"
+- "=="
 depends-member:
 - ["V9Commander16AnonymousCommand", "ArgumentParser"]
 - ["V9Commander16AnonymousCommand", "closure"]
