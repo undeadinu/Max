@@ -15,24 +15,24 @@ provides-member:
 - ["C9Commander5Group", "group"]
 provides-dynamic-lookup:
 depends-top-level:
-- "GroupError"
-- !private "&&"
-- "CommandType"
-- !private "FloatLiteralType"
-- "Equatable"
-- "Group"
-- !private "BooleanLiteralType"
-- !private "==="
 - "=="
-- "String"
 - !private "IntegerLiteralType"
-- !private "Help"
+- "GroupError"
+- "CommandType"
 - "CustomStringConvertible"
-- "ErrorType"
+- !private "&&"
+- "String"
+- "Group"
 - !private "StringLiteralType"
+- "Equatable"
+- !private "UnicodeScalarType"
+- !private "BooleanLiteralType"
 - "Bool"
 - "ArgumentParser"
-- !private "UnicodeScalarType"
+- !private "Help"
+- !private "==="
+- !private "FloatLiteralType"
+- "ErrorType"
 depends-member:
 - !private ["Ps9AnyObject", "Group"]
 - !private ["Ps9AnyObject", "GroupError"]

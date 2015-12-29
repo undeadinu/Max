@@ -21,25 +21,25 @@ provides-member:
 - ["Sa", "init"]
 provides-dynamic-lookup:
 depends-top-level:
-- "Equatable"
-- "Bool"
-- !private "&&"
 - "ArgumentConvertible"
-- !private "IntegerLiteralType"
-- "=="
-- !private "UnicodeScalarType"
 - "ArgumentError"
+- !private "IntegerLiteralType"
+- "Equatable"
+- "=="
+- !private "&&"
+- "Double"
 - !private "StringLiteralType"
+- "String"
 - "ArgumentParser"
 - "Array"
-- "CustomStringConvertible"
-- "Double"
+- !private "FloatLiteralType"
 - "ErrorType"
 - "Int"
-- !private "FloatLiteralType"
-- "String"
-- !private "BooleanLiteralType"
 - "Float"
+- !private "UnicodeScalarType"
+- !private "BooleanLiteralType"
+- "Bool"
+- "CustomStringConvertible"
 depends-member:
 - !private ["Ps16AbsoluteValuable", "ArgumentError"]
 - !private ["Ps16AbsoluteValuable", "Double"]

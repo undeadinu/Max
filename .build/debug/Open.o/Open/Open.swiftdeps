@@ -10,18 +10,18 @@ provides-member:
 provides-dynamic-lookup:
 - "open"
 depends-top-level:
+- !private ">"
+- !private "NSPipe"
+- !private "NSTask"
 - !private "print"
+- "String"
+- !private "StringLiteralType"
+- "shell"
+- "openCommand"
+- !private "Array"
+- "NSURL"
 - !private "NSUTF8StringEncoding"
 - "bash"
-- !private "NSPipe"
-- "NSURL"
-- !private ">"
-- !private "StringLiteralType"
-- !private "Array"
-- "String"
-- !private "NSTask"
-- "openCommand"
-- "shell"
 depends-member:
 - !private ["Ps9AnyObject", "absoluteString"]
 - !private ["Ps9AnyObject", "arguments"]

@@ -3,13 +3,20 @@ import Commander
 import Open
 
 //Utilities().FontsDirectory().open()
-print(Utilities().fontIsInstalled("FiraMono-Regular"))
+//print(Utilities().fontIsInstalled("FiraMono-Regular"))
 
-let reg = Registry(url: NSURL(string: "https://github.com/mozilla/Fira/blob/master/")!)
+let reg = Registry(url: NSURL(string: NSHomeDirectory() + "/Registry")!)
 
-  let json = try NSJSONSerialization.JSONObjectWithData("{\"name\" : \"FiraMono-Regular\", \"url\" : \"https://github.com/mozilla/Fira/blob/master/ttf/FiraMono-Regular.ttf?raw=true\"}".dataUsingEncoding(NSUTF8StringEncoding)!, options: .AllowFragments)
-  print(json["url"])
+print(reg.url.open())
 
+let filemanager:NSFileManager = NSFileManager()
+let fonts = filemanager.enumeratorAtPath(reg.url.path!)
+var fontsArray = Array<AnyObject>()
+while let font = fonts?.nextObject() {
+  if font.hasSuffix("ttf") {
+    print(font)
+  }
+}
 Group {
   $0.command("install",
   Flag("font", description: "Install a single font (Default)"),
@@ -20,7 +27,7 @@ Group {
       if (family) {
         print("Installing font family: \(fontName)".green())
       } else {
-      print("Installing font: \(fontName)".green())
+      print("\u{2714}  Installing font: \(fontName)".green())
     }
   }
 

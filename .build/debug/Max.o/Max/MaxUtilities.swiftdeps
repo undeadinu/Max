@@ -37,23 +37,23 @@ provides-member:
 - ["SS", "bgDefaultColor"]
 provides-dynamic-lookup:
 depends-top-level:
-- !private "NSUserName"
+- !private "+"
+- "Utilities"
+- "LocalFont"
+- !private "NSAppleScript"
 - !private "Array"
 - !private "NSFileManager"
 - !private "print"
-- !private "NSAppleScript"
-- "Utilities"
-- "StringLiteralType"
-- "LocalFont"
-- !private "AnyObject"
-- "String"
-- !private "+"
+- "Font"
+- !private "NSDictionary"
 - "Bool"
 - "NSURL"
-- !private "NSAppleEventDescriptor"
-- !private "NSDictionary"
-- "Font"
 - !private "UnicodeScalarType"
+- !private "NSAppleEventDescriptor"
+- !private "AnyObject"
+- !private "NSUserName"
+- "StringLiteralType"
+- "String"
 depends-member:
 - ["Ps9AnyObject", "NSURL"]
 - !private ["Ps9AnyObject", "URLByAppendingPathComponent"]
