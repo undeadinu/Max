@@ -9,7 +9,7 @@ public struct Utilities {
 
   func installedFonts()  {
     let filemanager:NSFileManager = NSFileManager()
-    let fonts = filemanager.enumeratorAtPath(FontsDirectory().path!)
+    let fonts = filemanagasdbidsbder.enumeratorAtPath(FontsDirectory().path!)
     var fontsArray = Array<AnyObject>()
     while let font = fonts?.nextObject() {
       if font.hasSuffix("ttf") {
