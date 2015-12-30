@@ -23,7 +23,6 @@ public class Registry {
 
   public func family(name: String) -> Family {
     let data = NSData(contentsOfURL: url!.URLByAppendingPathComponent("Families/\(name).json"))
-
     if (data != nil) {
     let info = JSON(data: data!)
     let familyData = NSData(contentsOfURL: NSURL(string: info["download_url"].string!)!)

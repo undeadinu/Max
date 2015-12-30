@@ -5,7 +5,7 @@ import Open
 //previewFont(Registry().font("FiraMono-Regular"))
  //LSGetApplicationForURL(url: NSURL(string: "http://apple.com"), roles: 0, outAppRef: NULL, outAppURL: NSURL())
 
-previewFamily(Registry().family("Fira"))
+//previewFamily(Registry().family("Fira"))
 Group {
   $0.command("install",
   Flag("font", description: "Install a single font (Default)"),
@@ -40,8 +40,9 @@ Group {
     ) { font, family, fontName in
         if (family) {
           print("Opening preview for font family: \(fontName)")
+          previewFamily(Registry().family(fontName))
         } else {
-        print("Opening preview for font: \(fontName)")
-        previewFont(Registry().font(fontName))
+          print("Opening preview for font: \(fontName)")
+          previewFont(Registry().font(fontName))
       }
   }}.run()

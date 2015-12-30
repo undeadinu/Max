@@ -9,7 +9,7 @@ public struct Utilities {
 
   func installedFonts()  {
     let filemanager:NSFileManager = NSFileManager()
-    let fonts = filemanagasdbidsbder.enumeratorAtPath(FontsDirectory().path!)
+    let fonts = filemanager.enumeratorAtPath(FontsDirectory().path!)
     var fontsArray = Array<AnyObject>()
     while let font = fonts?.nextObject() {
       if font.hasSuffix("ttf") {
@@ -40,7 +40,7 @@ public func previewFont(font: Font) {
   if (font.download != nil) {
   let template : Template
   do {
-   template = try Template(string: String(data: NSData(contentsOfURL: NSURL(string: "https://raw.githubusercontent.com/Colton/Max/master/preview.html")!)!, encoding: NSUTF8StringEncoding)!)
+   template = try Template(string: String(data: NSData(contentsOfURL: NSURL(string: "https://raw.githubusercontent.com/Colton/Max/master/.Preview/preview.html")!)!, encoding: NSUTF8StringEncoding)!)
    let data : [String : String] = ["name": font.name!, "download": font.download!.absoluteString]
    do {
      let rendering = try template.render(Box(data))
@@ -59,12 +59,11 @@ public func previewFont(font: Font) {
 }
 
 public func previewFamily(family: Family) {
-  if (family.name != nil) {
+  if (family.name != "") {
   let template : Template
   do {
-   template = try Template(string: String(data: NSData(contentsOfURL: NSURL(string: "https://raw.githubusercontent.com/Colton/Max/master/familypreview.html")!)!, encoding: NSUTF8StringEncoding)!)
+   template = try Template(string: String(data: NSData(contentsOfURL: NSURL(string: "https://raw.githubusercontent.com/Colton/Max/master/.Preview/familypreview.html")!)!, encoding: NSUTF8StringEncoding)!)
    let data : [String : AnyObject] = ["name": family.name!, "fonts": family.fonts!]
-   print(family.fonts![0].name)
    do {
      let rendering = try template.render(Box(data))
      let base64string = rendering.dataUsingEncoding(NSUTF8StringEncoding)!.base64EncodedStringWithOptions(NSDataBase64EncodingOptions(rawValue: 0))
@@ -129,8 +128,6 @@ public class Family {
         self.fonts = fonts
     }
 }
-
-
 
 // String extensions for colors in the terminal output
 public extension String {
