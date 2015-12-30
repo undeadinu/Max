@@ -109,7 +109,7 @@ public class Font : MustacheBoxable {
     public let sha256: String?
 
     public var mustacheBox: MustacheBox {
-        return Box(["name": self.name])
+        return Box(["name": self.name, "download" : download.absoluteString])
     }
 
     public init(name: String?, download: NSURL?, sha256: String?) {
