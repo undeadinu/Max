@@ -2,19 +2,8 @@ import Foundation
 import Commander
 import Open
 
-//Utilities().FontsDirectory().open()
-//print(Utilities().fontIsInstalled("FiraMono-Regular"))
-
-//print(reg.url.open())
-/*
-let filemanager:NSFileManager = NSFileManager()
-let fonts = filemanager.enumeratorAtPath(reg.url.path!)
-var fontsArray = Array<AnyObject>()
-while let font = fonts?.nextObject() {
-  if font.hasSuffix("ttf") {
-  //  print(font)
-  }
-}*/
+print(Registry().allFamilies()[0].fonts![1].sha256!)
+test()
 Group {
   $0.command("install",
   Flag("font", description: "Install a single font (Default)"),
@@ -39,5 +28,17 @@ Group {
         print("Uninstalling font family: \(fontName)")
       } else {
       print("Uninstalling font: \(fontName)")
-    }
+    }}
+
+    $0.command("preview",
+    Flag("font", description: "Preview a single font (Default)"),
+    Flag("family", description: "Preview a font family"),
+      Argument<String>("fontName"),
+      description: "Preview a font"
+    ) { font, family, fontName in
+        if (family) {
+          print("Opening preview for font family: \(fontName)")
+        } else {
+        print("Opening preview for font: \(fontName)")
+      }
   }}.run()

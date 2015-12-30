@@ -9,7 +9,10 @@ let package = Package(
                 majorVersion: 0),
        .Package(url: "https://github.com/SwiftyJSON/SwiftyJSON.git",
                 majorVersion: 2),
-       .Package(url: "https://github.com/Colton/CryptoSwift.git", majorVersion: 0)
+       .Package(url: "https://github.com/Colton/CryptoSwift.git",
+                majorVersion: 0),
+       .Package(url: "https://github.com/groue/GRMustache.swift.git",
+                majorVersion: 1)
 
    ]
 )

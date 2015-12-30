@@ -6,6 +6,7 @@ public class Registry {
 
   public let url = NSURL(string: "https://api.github.com/repos/colton/max/contents/.Registry")
 
+  // MARK: -  Individual font functions
   public func allFonts() -> [Font] {
     let data = NSData(contentsOfURL: url!.URLByAppendingPathComponent("Fonts"))
     let json = JSON(data: data!)
@@ -34,4 +35,25 @@ public class Registry {
     let shaString = "\(hash)".stringByTrimmingCharactersInSet(NSCharacterSet(charactersInString: "<>")).stringByReplacingOccurrencesOfString(" ", withString: "")
     return shaString
   }
+
+  // MARK: - Font family functions
+  func allFamilies() -> [Family] {
+    let data = NSData(contentsOfURL: url!.URLByAppendingPathComponent("Families"))
+    let json = JSON(data: data!)
+    var i = 0
+    var familiesArray : [Family] = []
+    for _ in json {
+      let fontData = NSData(contentsOfURL: NSURL(string: json[i]["download_url"].string!)!)
+      let fontJSON = JSON(data: fontData!)
+
+      var fontsArray : [Font] = []
+      for fontName in fontJSON["fonts"].arrayValue {
+        fontsArray.append(font(fontName.string!))
+      }
+      familiesArray.append(Family(name: fontJSON["name"].string, fonts: fontsArray))
+      i++
+    }
+    return familiesArray
+  }
+
 }

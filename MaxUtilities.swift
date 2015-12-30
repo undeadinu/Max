@@ -1,4 +1,5 @@
 import Foundation
+import Mustache
 
 public struct Utilities {
   func FontsDirectory() -> NSURL {
@@ -35,6 +36,19 @@ public struct Utilities {
   }
 }
 
+public func test() {
+  let template : Template
+  do {
+   template = try Template(string: String(data: NSData(url: NSURL(string: "")), encoding: NSUTF8StringEncoding))
+   let data = ["name": "Arthur"]
+   do {
+     let rendering = try template.render(Box(data))
+     print(rendering)
+   } catch _ {}
+  } catch _ {}
+}
+
+
 public class LocalFont {
   var name = ""
   var location = NSURL()
@@ -69,10 +83,9 @@ public class Font {
 public class Family {
 
     public let name: String?
+    public var fonts: [Font]?
 
-    public var fonts: [String]?
-
-    public init(name: String?, fonts: NSURL?, sha256: String?) {
+    public init(name: String?, fonts: [Font]?) {
         self.name = name
         self.fonts = fonts
     }
