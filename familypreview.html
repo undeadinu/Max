@@ -2,10 +2,6 @@
   <head>
     <title>{{name}} Preview</title>
     <style>
-      @font-face {
-        font-family: {{name}};
-        src: url({{download}});
-      }
       body {
         margin: 5px;
         width: 99%;
@@ -29,6 +25,10 @@
     </style>
   </head>
   <body>
+
+    {{#fonts}}
+      <h1>{{name}}</h1>
+    {{/fonts}}
     <div id="header"><h1>{{name}} Preview</h1></div>
     <a>Header</a>
     <h1>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius adipisci, sed libero. Iste asperiores suscipit, consequatur debitis animi impedit numquam facilis iusto porro labore dolorem, maxime magni incidunt. Delectus, est!</h1>

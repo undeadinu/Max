@@ -1,5 +1,6 @@
 import Foundation
 import Mustache
+import Open
 
 public struct Utilities {
   func FontsDirectory() -> NSURL {
@@ -35,19 +36,50 @@ public struct Utilities {
     return ""
   }
 }
-
 public func previewFont(font: Font) {
+  if (font.download != nil) {
   let template : Template
   do {
    template = try Template(string: String(data: NSData(contentsOfURL: NSURL(string: "https://raw.githubusercontent.com/Colton/Max/master/preview.html")!)!, encoding: NSUTF8StringEncoding)!)
    let data : [String : String] = ["name": font.name!, "download": font.download!.absoluteString]
    do {
      let rendering = try template.render(Box(data))
-     print(rendering)
-
+     let base64string = rendering.dataUsingEncoding(NSUTF8StringEncoding)!.base64EncodedStringWithOptions(NSDataBase64EncodingOptions(rawValue: 0))
+     let base64template = "data:text/html;base64," + base64string
+     let shellScript = "tell application \"Safari\"\nactivate\nopen location \"\(base64template)\"\nend tell"
+     var error: NSDictionary?
+     if let scriptObject = NSAppleScript(source: shellScript) {
+      scriptObject.executeAndReturnError(&error)
+     }
    } catch _ {}
   } catch _ {}
+} else {
+  print("Could not find font in the registry. Browse the registry at https://github.com/Colton/Max/tree/master/.Registry".red())
 }
+}
+
+public func previewFamily(family: Family) {
+  if (family.name != nil) {
+  let template : Template
+  do {
+   template = try Template(string: String(data: NSData(contentsOfURL: NSURL(string: "https://raw.githubusercontent.com/Colton/Max/master/familypreview.html")!)!, encoding: NSUTF8StringEncoding)!)
+   let data : [String : AnyObject] = ["name": family.name!, "fonts": family.fonts!]
+   do {
+     let rendering = try template.render(Box(data))
+     let base64string = rendering.dataUsingEncoding(NSUTF8StringEncoding)!.base64EncodedStringWithOptions(NSDataBase64EncodingOptions(rawValue: 0))
+     let base64template = "data:text/html;base64," + base64string
+     let shellScript = "tell application \"Safari\"\nactivate\nopen location \"\(base64template)\"\nend tell"
+     var error: NSDictionary?
+     if let scriptObject = NSAppleScript(source: shellScript) {
+      scriptObject.executeAndReturnError(&error)
+     }
+   } catch _ {}
+  } catch _ {}
+} else {
+  print("Could not find family in the registry. Browse the registry at https://github.com/Colton/Max/tree/master/.Registry".red())
+}
+}
+
 
 
 public class LocalFont {
@@ -58,6 +90,7 @@ public class LocalFont {
   var family = ""
 
   init() {}
+
   init(name : String) {
     self.name = name
     self.location = Utilities().FontsDirectory().URLByAppendingPathComponent("\(name).ttf")
