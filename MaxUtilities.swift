@@ -64,6 +64,7 @@ public func previewFamily(family: Family) {
   do {
    template = try Template(string: String(data: NSData(contentsOfURL: NSURL(string: "https://raw.githubusercontent.com/Colton/Max/master/familypreview.html")!)!, encoding: NSUTF8StringEncoding)!)
    let data : [String : AnyObject] = ["name": family.name!, "fonts": family.fonts!]
+   print(family.fonts![0].name)
    do {
      let rendering = try template.render(Box(data))
      let base64string = rendering.dataUsingEncoding(NSUTF8StringEncoding)!.base64EncodedStringWithOptions(NSDataBase64EncodingOptions(rawValue: 0))
@@ -99,13 +100,17 @@ public class LocalFont {
     }
 }
 
-public class Font {
+public class Font : MustacheBoxable {
 
     public let name: String?
 
     public var download: NSURL?
 
     public let sha256: String?
+
+    public var mustacheBox: MustacheBox {
+        return Box(["name": self.name])
+    }
 
     public init(name: String?, download: NSURL?, sha256: String?) {
         self.name = name
