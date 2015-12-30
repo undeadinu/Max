@@ -36,10 +36,10 @@ public struct Utilities {
   }
 }
 
-public func test() {
+public func previewFont(font: Font) {
   let template : Template
   do {
-   template = try Template(string: String(data: NSData(url: NSURL(string: "")), encoding: NSUTF8StringEncoding))
+   template = try Template(string: String(data: NSData(contentsOfURL: NSURL(string: "https://raw.githubusercontent.com/Colton/Max/master/preview.html")!)!, encoding: NSUTF8StringEncoding)!)
    let data = ["name": "Arthur"]
    do {
      let rendering = try template.render(Box(data))
