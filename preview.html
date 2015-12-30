@@ -1,22 +1,45 @@
 <html>
   <head>
-    <title>{{name}} Preview</title>
+    <title>FiraMono-Regular Preview</title>
     <style>
-    @font-face {
-    font-family: {{name}};
-    src: url({{download}});
-    }
+      @font-face {
+        font-family: {{name}};
+        src: url({{download}});
+      }
       body {
         margin: 5px;
-        width: 100%;
+        width: 99%;
         background-color: #fff
       }
 
-      h1 {
+      h1, h2, h3, h4, h5, p {
         font-family: {{name}};
         color: #000
+      }
+
+      #header h1 {
+        font-family: Helvetica;
+        text-align: center;
+      }
+
+      a {
+        font-family: Helvetica;
+        color: grey
       }
     </style>
   </head>
   <body>
-    <h1>Test</h1>
+    <div id="header"><h1>{{name}} Preview</h1></div>
+    <a>Header</a>
+    <h1>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius adipisci, sed libero. Iste asperiores suscipit, consequatur debitis animi impedit numquam facilis iusto porro labore dolorem, maxime magni incidunt. Delectus, est!</h1>
+    <br>
+    <a>Header 2</a>
+    <h2>Totam at eius excepturi deleniti sed, error repellat itaque omnis maiores tempora ratione dolor velit minus porro aspernatur repudiandae labore quas adipisci esse, nulla tempore voluptatibus cupiditate. Ab provident, atque.</h2>
+    <a>Header 3</a>
+    <h3>Possimus deserunt nisi perferendis, consequuntur odio et aperiam, est, dicta dolor itaque sunt laborum, magni qui optio illum dolore laudantium similique harum. Eveniet quis, libero eligendi delectus repellendus repudiandae ipsum?</h3>
+    <a>Header 4</a>
+    <h4>Vel nam odio dolorem, voluptas sequi minus quo tempore, animi est quia earum maxime. Reiciendis quae repellat, modi non, veniam natus soluta at optio vitae in excepturi minima eveniet dolor.</h4>
+    <a>Paragraph</a>
+    <p>Nobis qui velit eum neque voluptate pariatur, provident ullam necessitatibus consequuntur.</p>
+  </body>
+  </html>

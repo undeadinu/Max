@@ -40,10 +40,11 @@ public func previewFont(font: Font) {
   let template : Template
   do {
    template = try Template(string: String(data: NSData(contentsOfURL: NSURL(string: "https://raw.githubusercontent.com/Colton/Max/master/preview.html")!)!, encoding: NSUTF8StringEncoding)!)
-   let data = ["name": "Arthur"]
+   let data : [String : String] = ["name": font.name!, "download": font.download!.absoluteString]
    do {
      let rendering = try template.render(Box(data))
      print(rendering)
+
    } catch _ {}
   } catch _ {}
 }

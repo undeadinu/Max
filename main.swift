@@ -3,7 +3,9 @@ import Commander
 import Open
 
 print(Registry().allFamilies()[0].fonts![1].sha256!)
-test()
+
+previewFont(Registry().font("FiraMono-Regular"))
+
 Group {
   $0.command("install",
   Flag("font", description: "Install a single font (Default)"),
