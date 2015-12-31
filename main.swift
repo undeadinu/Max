@@ -27,9 +27,9 @@ Group {
     description: "Uninstall a font"
   ) { font, family, fontName in
       if (family) {
-        print("Uninstalling font family: \(fontName)")
+        uninstallFamily(Registry().family(fontName))
       } else {
-      uninstallFont(Registry().font(fontName))
+        uninstallFont(Registry().font(fontName))
     }}
 
     $0.command("preview",

@@ -11,9 +11,9 @@ release: # ```swift build``` in the release configuration
 
 install-dev: # same as debug but also installs the executable to system. See $PATH
 	@swift build
-	@cp $(DEBUGDIR) /usr/local/bin/Max
+	@cp $(DEBUGDIR) /usr/local/bin/max
 
 install-release: # same as release but also installs the executable to system.
 	@swift build --clean
 	@swift build --configuration release
-	@cp $(RELEASEDIR) /usr/local/bin/Max
+	@cp $(RELEASEDIR) /usr/local/bin/max

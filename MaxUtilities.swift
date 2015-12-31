@@ -57,7 +57,7 @@ if fontSHA(fontData).rangeOfString(font.sha256!) != nil {
   print("\u{2717} Max can not verify the integrity of this font. The SHA256 hash does not match the one generated.".red())
 }
 } else {
-  print("\u{2717} Could not find font \"\(font.name!)\" in the registry. Browse the registry at https://github.com/Colton/Max/tree/master/.Registry".red())
+  print("\u{2717} Could not find font in the registry. Browse the registry at https://github.com/Colton/Max/tree/master/.Registry".red())
 }
 }
 
@@ -72,7 +72,10 @@ public func uninstallFont(font: Font) {
 }
 
 public func uninstallFamily(family: Family) {
-  
+  for font in family.fonts! {
+    print(font)
+    uninstallFont(font)
+  }
 }
 
 
@@ -83,7 +86,7 @@ public func installFamily(family: Family) {
     }
     print("\u{2713} Installed family: \(family.name!)".green())
   } else {
-    print("\u{2717} Could not find family \"\(family.name!)\" in the registry. Browse the registry at https://github.com/Colton/Max/tree/master/.Registry".red())
+    print("\u{2717} Could not find family in the registry. Browse the registry at https://github.com/Colton/Max/tree/master/.Registry".red())
   }
 }
 
@@ -106,7 +109,7 @@ public func previewFont(font: Font) {
    } catch _ {}
   } catch _ {}
 } else {
-  print("\u{2717} Could not find font \"\(font.name!)\"in the registry. Browse the registry at https://github.com/Colton/Max/tree/master/.Registry".red())
+  print("\u{2717} Could not find font in the registry. Browse the registry at https://github.com/Colton/Max/tree/master/.Registry".red())
 }
 }
 
@@ -128,7 +131,7 @@ public func previewFamily(family: Family) {
    } catch _ {}
   } catch _ {}
 } else {
-  print("\u{2717} Could not find family \"\(family.name)\" in the registry. Browse the registry at https://github.com/Colton/Max/tree/master/.Registry".red())
+  print("\u{2717} Could not find family in the registry. Browse the registry at https://github.com/Colton/Max/tree/master/.Registry".red())
 }
 }
 
