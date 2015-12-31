@@ -42,7 +42,5 @@ The better font manager for OS X
 
 4. Submit a pull request.
 
-***Note***: Please only submit fonts you own or fonts with open source licenses such as [Source Code Pro](https://github.com/adobe-fonts/source-code-pro)
-
 # License
 Code is under the [Apache License](http://choosealicense.com/licenses/apache-2.0/).
