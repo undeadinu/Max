@@ -24,39 +24,35 @@ public class Registry {
   public func family(name: String) -> Family {
     let data = NSData(contentsOfURL: url!.URLByAppendingPathComponent("Families/\(name).json"))
     if (data != nil) {
-      let info = JSON(data: data!)
-      let familyData = NSData(contentsOfURL: NSURL(string: info["download_url"].string!)!)
-      let family = JSON(data: familyData!)
-      var fontsArray : [Font] = []
-      var i = 0
-      for _ in family["fonts"].arrayValue {
-        fontsArray.append(font(family["fonts"][i].stringValue))
-        i++
+    let info = JSON(data: data!)
+    let familyData = NSData(contentsOfURL: NSURL(string: info["download_url"].string!)!)
+    let family = JSON(data: familyData!)
+    var fontsArray : [Font] = []
+    var i = 0
+    for _ in family["fonts"].arrayValue {
+      fontsArray.append(font(family["fonts"][i].stringValue))
+      i++
     }
     return Family(name: family["name"].string, fonts: fontsArray)
   } else {
     return Family(name: "", fonts: [])
-    }
+  }
+
   }
 
   public func font(name: String) -> Font {
     let data = NSData(contentsOfURL: url!.URLByAppendingPathComponent("Fonts/\(name).json"))
 
     if (data != nil) {
-      let info = JSON(data: data!)
-      let fontData = NSData(contentsOfURL: NSURL(string: info["download_url"].string!)!)
-      let font = JSON(data: fontData!)
+    let info = JSON(data: data!)
+    let fontData = NSData(contentsOfURL: NSURL(string: info["download_url"].string!)!)
+    let font = JSON(data: fontData!)
 
-      return Font(name: font["name"].string, download: NSURL(string: font["download"].string!), sha256: font["sha256"].string)
-    } else {
-      return Font(name: "", download: NSURL(), sha256 : "")
-    }
+    return Font(name: font["name"].string, download: NSURL(string: font["download"].string!), sha256: font["sha256"].string)
+  } else {
+    return Font(name: "", download: NSURL(), sha256 : "")
   }
 
-  func fontSHA(data : NSData) -> String {
-    let hash = data.sha256()
-    let shaString = "\(hash)".stringByTrimmingCharactersInSet(NSCharacterSet(charactersInString: "<>")).stringByReplacingOccurrencesOfString(" ", withString: "")
-    return shaString
   }
 
   // MARK: - Font family functions

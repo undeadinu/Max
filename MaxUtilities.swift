@@ -36,6 +36,58 @@ public struct Utilities {
     return ""
   }
 }
+
+func fontSHA(data : NSData) -> String {
+  let hash = data.sha256()
+  let shaString = "\(hash)".stringByTrimmingCharactersInSet(NSCharacterSet(charactersInString: "<>")).stringByReplacingOccurrencesOfString(" ", withString: "").stringByReplacingOccurrencesOfString("<", withString:"").stringByReplacingOccurrencesOfString(">", withString:"")
+  return shaString
+}
+
+public func installFont(font: Font) {
+  if (font.download != nil) {
+  let installURL = Utilities().FontsDirectory().URLByAppendingPathComponent(font.name! + ".ttf")
+  var fontData : NSData = NSData()
+  do {
+    fontData = try NSData(contentsOfURL: font.download!, options: NSDataReadingOptions())
+  } catch {}
+if fontSHA(fontData).rangeOfString(font.sha256!) != nil {
+    fontData.writeToURL(installURL, atomically: false)
+    print("\u{2713} Installed font: \(font.name!)".green())
+} else {
+  print("\u{2717} Max can not verify the integrity of this font. The SHA256 hash does not match the one generated.".red())
+}
+} else {
+  print("\u{2717} Could not find font \"\(font.name!)\" in the registry. Browse the registry at https://github.com/Colton/Max/tree/master/.Registry".red())
+}
+}
+
+public func uninstallFont(font: Font) {
+  if (NSFileManager.defaultManager().fileExistsAtPath(Utilities().FontsDirectory().URLByAppendingPathComponent(font.name! + ".ttf").path!)) {
+  do {
+    try NSFileManager.defaultManager().removeItemAtURL(Utilities().FontsDirectory().URLByAppendingPathComponent(font.name! + ".ttf"))
+  } catch {}
+} else {
+  print("⚠️  Font is not installed.".yellow())
+}
+}
+
+public func uninstallFamily(family: Family) {
+  
+}
+
+
+public func installFamily(family: Family) {
+  if (family.name != "") {
+    for font in family.fonts! {
+      installFont(font)
+    }
+    print("\u{2713} Installed family: \(family.name!)".green())
+  } else {
+    print("\u{2717} Could not find family \"\(family.name!)\" in the registry. Browse the registry at https://github.com/Colton/Max/tree/master/.Registry".red())
+  }
+}
+
+
 public func previewFont(font: Font) {
   if (font.download != nil) {
   let template : Template
@@ -54,7 +106,7 @@ public func previewFont(font: Font) {
    } catch _ {}
   } catch _ {}
 } else {
-  print("Could not find font in the registry. Browse the registry at https://github.com/Colton/Max/tree/master/.Registry".red())
+  print("\u{2717} Could not find font \"\(font.name!)\"in the registry. Browse the registry at https://github.com/Colton/Max/tree/master/.Registry".red())
 }
 }
 
@@ -76,7 +128,7 @@ public func previewFamily(family: Family) {
    } catch _ {}
   } catch _ {}
 } else {
-  print("Could not find family in the registry. Browse the registry at https://github.com/Colton/Max/tree/master/.Registry".red())
+  print("\u{2717} Could not find family \"\(family.name)\" in the registry. Browse the registry at https://github.com/Colton/Max/tree/master/.Registry".red())
 }
 }
 
