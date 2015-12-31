@@ -6,7 +6,7 @@ The better font manager for OS X
 (2) [Homebrew](http://brew.sh) for fonts.
 
 # Installation
-  ```command to install max```
+  ```curl -s -l https://raw.githubusercontent.com/Colton/Max/master/install.sh | bash```
 
 # Quickstart
 
